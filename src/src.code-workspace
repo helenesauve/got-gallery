@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "src",
+			"path": "."
+		},
+		{
+			"name": "got-netlify-evening",
+			"path": "../../../../../../../../got-netlify-evening"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
