@@ -1,15 +1,22 @@
-import React from 'react'
-import characterData from '../characterData.json'
-import Character from '../components/Character'
+import React from "react";
 
-const CharacterGallery = () => {
-    const characterList = characterData.map(character => <Character {...character} key={character.id} />)
+
+const Character = props => {
+    const { name, imgUrl, birth, death, race, realm, spouse } = props;
     return (
-        <div
-            className='gallery-container' data-test='char-gallery'>
-            {characterList}
+        <div data-test="component-character">
+            <h1 data-test="char-name">{name}</h1>
+            <img data-test="char-img" alt=""></img>
+            <ul>
+                <li data-test="char-list"></li>
+                <li data-test="char-birth">Date of Birth: {birth}</li>
+                <li data-test="char-death">Date of Death: {death}</li>
+                <li data-test="char-race">Race: {race}</li>
+                <li data-test="char-realm">Realm: {realm}</li>
+                <li data-test="char-spouse">Spouse: {spouse}</li>
+            </ul>
         </div>
-    );
-};
+    )
+}
 
-export default CharacterGallery;
+export default Character;
